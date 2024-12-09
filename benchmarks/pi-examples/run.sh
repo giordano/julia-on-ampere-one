@@ -1,3 +1,3 @@
 #!/bin/bash
 
-julia --threads=192 -L pi.jl -e 'weak_scaling(); strong_scaling()'
+julia --threads=auto --project=. -L pi.jl -e 'weak_scaling(); strong_scaling()'
