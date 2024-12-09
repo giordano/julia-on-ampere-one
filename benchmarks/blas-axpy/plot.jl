@@ -17,10 +17,9 @@ openblas_64 = readdlm(joinpath(@__DIR__, "openblas_Float64.csv"), ',', Float64; 
 gflops(n::Float64, t::Float64) = 2 * n / max(t, 32)
 gflops(m::Matrix{Float64}) = gflops.(m[:, 1], m[:, 2])
 
-# https://resources.nvidia.com/en-us-grace-cpu/grace-hopper-superchip
-l1_size =  64 << 10 #  64 KiB
-l2_size =   1 << 20 #   1 MiB
-l3_size = 114 << 20 # 114 MiB (hwloc says L3 is 114 MiB, not 117 as written in the datasheet)
+l1d_size =  12 << 20 #  12 MiB
+l2_size  = 384 << 20 # 384 MiB
+# l3_size = 114 << 20 # 114 MiB (hwloc says L3 is 114 MiB, not 117 as written in the datasheet)
 linewidth = 2
 
 function plot_benchmarks(title, julia; type::Union{Nothing,DataType}=nothing)
@@ -28,15 +27,14 @@ function plot_benchmarks(title, julia; type::Union{Nothing,DataType}=nothing)
     if !isnothing(type)
         # Lines corresponding to cache sizes.  Remember that there are two
         # vectors involved, hence the factor `2` at the denominator.
-        caches = [l1_size, l2_size, l3_size] ./ (2 * sizeof(type))
+        caches = [l1d_size, l2_size] ./ (2 * sizeof(type))
         vline!(p, caches; label="")
         format(str) = (str, 8, :black, :left)
-        annotate!(p, caches[1] * 1.2, 1, format("L1"))
-        annotate!(p, caches[2] * 1.2, 1, format("L2"))
-        annotate!(p, caches[3] * 1.2, 1, format("L3"))
+        annotate!(p, caches[1] * 1.2, 36 / sizeof(type), format("L1d"))
+        annotate!(p, caches[2] * 1.2, 36 / sizeof(type), format("L2"))
     end
     plot!(p; title=title, xscale=:log10, xlabel="Vector size", ylabel="GFLOPS",
-             xticks=floor.(Int, exp10.(0:9)), yticks=0:5:60, legend=:topleft, linewidth)
+             xticks=floor.(Int, exp10.(0:9)), yticks=0:2:60, legend=:topleft, linewidth)
     plot!(p, julia[:, 1], gflops(julia); label="Julia", marker=:circle, markersize=3, linewidth)
     return p
 end
