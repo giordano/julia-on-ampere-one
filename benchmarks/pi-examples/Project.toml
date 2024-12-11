@@ -1,8 +1,10 @@
 [deps]
 DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
+LinuxPerf = "b4c46c6c-4fb0-484d-a11a-41bc3392d094"
 Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
 
 [compat]
 DelimitedFiles = "1.9"
+LinuxPerf = "0.4"
 Plots = "1.40"
 julia = "1.11"

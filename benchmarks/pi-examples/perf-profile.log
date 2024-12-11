@@ -1,0 +1,210 @@
+
+Nthreads = 1
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┌ cpu-cycles               8.32e+09  100.0%  #  3.2 cycles per ns
+│ stalled-cycles-frontend  7.88e+06  100.0%  #  0.1% of cycles
+└ stalled-cycles-backend   7.01e+09  100.0%  # 84.2% of cycles
+┌ instructions             5.34e+09  100.0%  #  0.6 insns per cycle
+└ branch-misses            2.03e+04  100.0%
+┌ cache-references         5.32e+07  100.0%
+└ cache-misses             1.49e+05  100.0%  #  0.3% of cache refs
+┌ task-clock               2.61e+09  100.0%  #  2.6 s
+└ page-faults              4.50e+01  100.0%
+                aggregated from 192 threads
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Nthreads = 2
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┌ cpu-cycles               8.33e+09  100.0%  #  3.2 cycles per ns
+│ stalled-cycles-frontend  1.03e+07  100.0%  #  0.1% of cycles
+└ stalled-cycles-backend   7.01e+09  100.0%  # 84.2% of cycles
+┌ instructions             5.33e+09  100.0%  #  0.6 insns per cycle
+└ branch-misses            2.82e+04  100.0%
+┌ cache-references         5.20e+07  100.0%
+└ cache-misses             1.74e+05  100.0%  #  0.3% of cache refs
+┌ task-clock               2.61e+09  100.0%  #  2.6 s
+└ page-faults              0.00e+00  100.0%
+                aggregated from 192 threads
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Nthreads = 3
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┌ cpu-cycles               8.32e+09  100.0%  #  3.2 cycles per ns
+│ stalled-cycles-frontend  7.59e+06  100.0%  #  0.1% of cycles
+└ stalled-cycles-backend   7.01e+09  100.0%  # 84.2% of cycles
+┌ instructions             5.34e+09  100.0%  #  0.6 insns per cycle
+└ branch-misses            1.95e+04  100.0%
+┌ cache-references         5.37e+07  100.0%
+└ cache-misses             1.23e+05  100.0%  #  0.2% of cache refs
+┌ task-clock               2.61e+09  100.0%  #  2.6 s
+└ page-faults              0.00e+00  100.0%
+                aggregated from 192 threads
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Nthreads = 4
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┌ cpu-cycles               8.32e+09  100.0%  #  3.2 cycles per ns
+│ stalled-cycles-frontend  8.03e+06  100.0%  #  0.1% of cycles
+└ stalled-cycles-backend   7.01e+09  100.0%  # 84.2% of cycles
+┌ instructions             5.33e+09  100.0%  #  0.6 insns per cycle
+└ branch-misses            1.97e+04  100.0%
+┌ cache-references         5.11e+07  100.0%
+└ cache-misses             1.36e+05  100.0%  #  0.3% of cache refs
+┌ task-clock               2.61e+09  100.0%  #  2.6 s
+└ page-faults              0.00e+00  100.0%
+                aggregated from 192 threads
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Nthreads = 6
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┌ cpu-cycles               8.32e+09  100.0%  #  3.2 cycles per ns
+│ stalled-cycles-frontend  7.65e+06  100.0%  #  0.1% of cycles
+└ stalled-cycles-backend   7.01e+09  100.0%  # 84.2% of cycles
+┌ instructions             5.34e+09  100.0%  #  0.6 insns per cycle
+└ branch-misses            1.90e+04  100.0%
+┌ cache-references         5.32e+07  100.0%
+└ cache-misses             1.19e+05  100.0%  #  0.2% of cache refs
+┌ task-clock               2.61e+09  100.0%  #  2.6 s
+└ page-faults              0.00e+00  100.0%
+                aggregated from 192 threads
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Nthreads = 8
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┌ cpu-cycles               8.33e+09  100.0%  #  2.9 cycles per ns
+│ stalled-cycles-frontend  7.99e+06  100.0%  #  0.1% of cycles
+└ stalled-cycles-backend   7.01e+09  100.0%  # 84.2% of cycles
+┌ instructions             5.34e+09  100.0%  #  0.6 insns per cycle
+└ branch-misses            1.92e+04  100.0%
+┌ cache-references         5.36e+07  100.0%
+└ cache-misses             1.64e+05  100.0%  #  0.3% of cache refs
+┌ task-clock               2.86e+09  100.0%  #  2.9 s
+└ page-faults              0.00e+00  100.0%
+                aggregated from 192 threads
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Nthreads = 12
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┌ cpu-cycles               8.33e+09  100.0%  #  2.8 cycles per ns
+│ stalled-cycles-frontend  7.87e+06  100.0%  #  0.1% of cycles
+└ stalled-cycles-backend   7.01e+09  100.0%  # 84.2% of cycles
+┌ instructions             5.34e+09  100.0%  #  0.6 insns per cycle
+└ branch-misses            1.95e+04  100.0%
+┌ cache-references         5.39e+07  100.0%
+└ cache-misses             1.67e+05  100.0%  #  0.3% of cache refs
+┌ task-clock               2.95e+09  100.0%  #  2.9 s
+└ page-faults              0.00e+00  100.0%
+                aggregated from 192 threads
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Nthreads = 16
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┌ cpu-cycles               8.33e+09  100.0%  #  2.6 cycles per ns
+│ stalled-cycles-frontend  8.41e+06  100.0%  #  0.1% of cycles
+└ stalled-cycles-backend   7.01e+09  100.0%  # 84.2% of cycles
+┌ instructions             5.34e+09  100.0%  #  0.6 insns per cycle
+└ branch-misses            1.87e+04  100.0%
+┌ cache-references         5.22e+07  100.0%
+└ cache-misses             1.83e+05  100.0%  #  0.4% of cache refs
+┌ task-clock               3.15e+09  100.0%  #  3.2 s
+└ page-faults              0.00e+00  100.0%
+                aggregated from 192 threads
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Nthreads = 24
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┌ cpu-cycles               8.33e+09  100.0%  #  2.5 cycles per ns
+│ stalled-cycles-frontend  8.39e+06  100.0%  #  0.1% of cycles
+└ stalled-cycles-backend   7.01e+09  100.0%  # 84.2% of cycles
+┌ instructions             5.34e+09  100.0%  #  0.6 insns per cycle
+└ branch-misses            2.03e+04  100.0%
+┌ cache-references         5.34e+07  100.0%
+└ cache-misses             1.72e+05  100.0%  #  0.3% of cache refs
+┌ task-clock               3.38e+09  100.0%  #  3.4 s
+└ page-faults              4.30e+01  100.0%
+                aggregated from 192 threads
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Nthreads = 32
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┌ cpu-cycles               8.33e+09  100.0%  #  2.4 cycles per ns
+│ stalled-cycles-frontend  8.66e+06  100.0%  #  0.1% of cycles
+└ stalled-cycles-backend   7.01e+09  100.0%  # 84.2% of cycles
+┌ instructions             5.34e+09  100.0%  #  0.6 insns per cycle
+└ branch-misses            1.93e+04  100.0%
+┌ cache-references         5.30e+07  100.0%
+└ cache-misses             1.74e+05  100.0%  #  0.3% of cache refs
+┌ task-clock               3.49e+09  100.0%  #  3.5 s
+└ page-faults              0.00e+00  100.0%
+                aggregated from 192 threads
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Nthreads = 48
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┌ cpu-cycles               8.33e+09  100.0%  #  2.4 cycles per ns
+│ stalled-cycles-frontend  8.38e+06  100.0%  #  0.1% of cycles
+└ stalled-cycles-backend   7.01e+09  100.0%  # 84.2% of cycles
+┌ instructions             5.35e+09  100.0%  #  0.6 insns per cycle
+└ branch-misses            1.93e+04  100.0%
+┌ cache-references         5.49e+07  100.0%
+└ cache-misses             1.82e+05  100.0%  #  0.3% of cache refs
+┌ task-clock               3.54e+09  100.0%  #  3.5 s
+└ page-faults              0.00e+00  100.0%
+                aggregated from 192 threads
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Nthreads = 64
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┌ cpu-cycles               8.33e+09  100.0%  #  2.3 cycles per ns
+│ stalled-cycles-frontend  7.73e+06  100.0%  #  0.1% of cycles
+└ stalled-cycles-backend   7.01e+09  100.0%  # 84.2% of cycles
+┌ instructions             5.35e+09  100.0%  #  0.6 insns per cycle
+└ branch-misses            1.91e+04  100.0%
+┌ cache-references         5.50e+07  100.0%
+└ cache-misses             1.76e+05  100.0%  #  0.3% of cache refs
+┌ task-clock               3.56e+09  100.0%  #  3.6 s
+└ page-faults              0.00e+00  100.0%
+                aggregated from 192 threads
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Nthreads = 96
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┌ cpu-cycles               8.32e+09  100.0%  #  2.3 cycles per ns
+│ stalled-cycles-frontend  7.08e+06  100.0%  #  0.1% of cycles
+└ stalled-cycles-backend   7.01e+09  100.0%  # 84.2% of cycles
+┌ instructions             5.34e+09  100.0%  #  0.6 insns per cycle
+└ branch-misses            1.97e+04  100.0%
+┌ cache-references         5.41e+07  100.0%
+└ cache-misses             1.43e+05  100.0%  #  0.3% of cache refs
+┌ task-clock               3.59e+09  100.0%  #  3.6 s
+└ page-faults              0.00e+00  100.0%
+                aggregated from 192 threads
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Nthreads = 128
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┌ cpu-cycles               8.32e+09  100.0%  #  2.3 cycles per ns
+│ stalled-cycles-frontend  7.06e+06  100.0%  #  0.1% of cycles
+└ stalled-cycles-backend   7.01e+09  100.0%  # 84.2% of cycles
+┌ instructions             5.34e+09  100.0%  #  0.6 insns per cycle
+└ branch-misses            1.99e+04  100.0%
+┌ cache-references         5.38e+07  100.0%
+└ cache-misses             1.49e+05  100.0%  #  0.3% of cache refs
+┌ task-clock               3.68e+09  100.0%  #  3.7 s
+└ page-faults              0.00e+00  100.0%
+                aggregated from 192 threads
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Nthreads = 192
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┌ cpu-cycles               8.32e+09  100.0%  #  2.2 cycles per ns
+│ stalled-cycles-frontend  7.18e+06  100.0%  #  0.1% of cycles
+└ stalled-cycles-backend   7.01e+09  100.0%  # 84.2% of cycles
+┌ instructions             5.34e+09  100.0%  #  0.6 insns per cycle
+└ branch-misses            2.15e+04  100.0%
+┌ cache-references         5.48e+07  100.0%
+└ cache-misses             1.53e+05  100.0%  #  0.3% of cache refs
+┌ task-clock               3.79e+09  100.0%  #  3.8 s
+└ page-faults              9.00e+00  100.0%
+                aggregated from 192 threads
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
