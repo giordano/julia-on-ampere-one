@@ -1,7 +1,7 @@
 using Plots, DelimitedFiles
 
-function plot_weak_scaling()
-    weak_scaling = readdlm(joinpath(@__DIR__, "weak-scaling.csv"), ',', Float64; skipstart=1)
+function plot_weak_scaling(input, title, yticks, output)
+    weak_scaling = readdlm(joinpath(@__DIR__, input), ',', Float64; skipstart=1)
 
     nthreads = Int.(weak_scaling[:, 1])
 
@@ -9,18 +9,18 @@ function plot_weak_scaling()
              xticks=(nthreads, string.(nthreads)),
              xscale=:log2,
              xlabel="Number of threads",
-             yticks=0.6:0.05:1,
+             yticks,
              ylabel="Parallel efficiency",
              marker=:circle,
              markersize=3,
              label="",
-             title="Weak scaling of pi example",
+             title,
              )
-    savefig("weak-scaling.pdf")
+    savefig(output)
 end
 
-function plot_strong_scaling()
-    strong_scaling = readdlm(joinpath(@__DIR__, "strong-scaling.csv"), ',', Float64; skipstart=1)
+function plot_strong_scaling(input, title, yticks, output)
+    strong_scaling = readdlm(joinpath(@__DIR__, input), ',', Float64; skipstart=1)
 
     nthreads = Int.(strong_scaling[:, 1])
 
@@ -28,15 +28,17 @@ function plot_strong_scaling()
              xticks=(nthreads, string.(nthreads)),
              xscale=:log2,
              xlabel="Number of threads",
-             yticks=0.4:0.05:1,
+             yticks,
              ylabel="Parallel efficiency",
              marker=:circle,
              markersize=3,
              label="",
-             title="Strong scaling of pi example",
+             title,
              )
-    savefig("strong-scaling.pdf")
+    savefig(output)
 end
 
-plot_weak_scaling()
-plot_strong_scaling()
+plot_weak_scaling("weak-scaling.csv", "Weak scaling of pi example (pin: cores)", 0.6:0.05:1.1, "weak-scaling.pdf")
+plot_strong_scaling("strong-scaling.csv", "Strong scaling of pi example (pin: cores)", 0.4:0.05:1.1, "strong-scaling.pdf")
+plot_weak_scaling("weak-scaling-pinned-alternated.csv", "Weak scaling of pi example (pin: 0:2:191)", 0.98:0.001:1.1, "weak-scaling-pinned-alternated.pdf")
+plot_strong_scaling("strong-scaling-pinned-alternated.csv", "Strong scaling of pi example (pin: 0:2:191)", 0.98:0.002:1.1, "strong-scaling-pinned-alternated.pdf")
